@@ -6,12 +6,7 @@ const yeheyText = document.getElementById("yehey-text");
 noBtn.disabled = true;
 
 yesBtn.addEventListener("click", () => {
-    // Show the "Yeheyyy" text in a customizable position
-    yeheyText.style.left = "50%";  // Change this for position
-    yeheyText.style.top = "80%";   // Change this for position
-    yeheyText.style.fontSize = "30px"; // Customize font size
-    yeheyText.style.color = "blue"; // Customize text color
-    yeheyText.style.transform = "translate(-50%, -50%)";
+    // Show the "Yeheyyy" text
     yeheyText.style.display = "block";
 
     // Create lots of hearts floating from the bottom
