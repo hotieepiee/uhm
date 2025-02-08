@@ -2,44 +2,67 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #ffe6f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
+
 #reason-container {
-    margin-top: 50px;
     font-size: 18px;
     font-weight: bold;
     color: #ff3366;
+    margin-bottom: 20px;
 }
+
 #question-container {
     position: absolute;
-    bottom: 100px; /* Adjust this if needed */
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
 }
+
 #yes-btn, #no-btn {
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 18px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    margin: 10px;
 }
+
 #yes-btn {
     background-color: #ff6699;
     color: white;
 }
+
 #no-btn {
     background-color: #ccc;
     color: black;
 }
+
 #yehey-text {
     display: none;
     position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: blue;
 }
+
+/* Floating hearts animation */
 .heart {
     position: absolute;
     color: red;
     font-size: 24px;
     animation: floatUp 2s linear infinite;
 }
+
 @keyframes floatUp {
     from {
         transform: translateY(0);
@@ -48,5 +71,19 @@ body {
     to {
         transform: translateY(-200px);
         opacity: 0;
+    }
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 600px) {
+    #reason-container {
+        font-size: 16px;
+    }
+    #yes-btn, #no-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    #yehey-text {
+        font-size: 24px;
     }
 }
