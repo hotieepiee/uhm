@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffccd5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+#reason-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#reasons-list {
+    list-style: none;
+    padding: 0;
+}
+
+#reasons-list li {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#question-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#yes-button {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#no-button {
+    background-color: #ccc;
+    color: black;
+    pointer-events: none;
+}
+
+#celebration-container {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: none;
+}
+
+#yehey-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    animation: pop-up 0.5s ease-in-out;
+}
+
+@keyframes pop-up {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
