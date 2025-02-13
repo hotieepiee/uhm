@@ -11,12 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // Random position along the width
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.bottom = "0";
-        heart.style.fontSize = Math.random() * 20 + 20 + "px";
+
+        // Responsive font size for hearts
+        let size = Math.random() * 10 + 10; // Smaller for mobile
+        heart.style.fontSize = size + "px";
 
         document.body.appendChild(heart);
 
         setTimeout(() => {
             heart.remove();
-        }, 4000); // Remove after animation ends
+        }, 4000);
     }
 });
