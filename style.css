@@ -1,4 +1,4 @@
-/* ===== 🌸 Background Styling ===== */
+/* ===== 🌸 General Styling ===== */
 body {
     background-color: #ffe6f2;
     margin: 0;
@@ -14,28 +14,24 @@ body {
 /* Bouncing text effect */
 .bouncing-text {
     position: absolute;
-    top: 30%;
-    font-size: 50px;
+    top: 25%;
+    font-size: 6vw; /* Responsive font size */
     font-weight: bold;
     color: #ff3366;
     text-align: center;
     animation: bounceText 1.5s ease-in-out infinite;
+    padding: 0 5%;
 }
 
 @keyframes bounceText {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Floating hearts animation */
 .heart {
     position: absolute;
     color: red;
-    font-size: 24px;
     animation: floatUp 4s linear infinite;
 }
 
@@ -53,9 +49,28 @@ body {
 /* GIF Styling */
 .gif-container {
     position: absolute;
-    bottom: 10%;
+    bottom: 8%;
 }
 
 .gif-container img {
-    width: 250px;
+    width: 40vw; /* Responsive width */
+    max-width: 250px;
+}
+
+/* ===== 📱 Mobile Styling ===== */
+@media (max-width: 600px) {
+    .bouncing-text {
+        font-size: 8vw; /* Larger text for mobile */
+        top: 20%;
+    }
+
+    .gif-container img {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .bouncing-text {
+        font-size: 10vw;
+    }
 }
