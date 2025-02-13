@@ -1,6 +1,5 @@
 /* ===== 🌸 JavaScript for Looping Hearts ===== */
 document.addEventListener("DOMContentLoaded", function () {
-    // Start infinite heart generation
     setInterval(createHeart, 300);
 
     function createHeart() {
@@ -9,17 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         heart.classList.add("heart");
 
         // Random position along the width
-        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.left = Math.random() * 90 + "vw";
         heart.style.bottom = "0";
-
-        // Responsive font size for hearts
-        let size = Math.random() * 10 + 10; // Smaller for mobile
-        heart.style.fontSize = size + "px";
+        heart.style.fontSize = Math.random() * 20 + 20 + "px";
 
         document.body.appendChild(heart);
 
         setTimeout(() => {
             heart.remove();
-        }, 4000);
+        }, 5000); // Remove after animation ends
     }
 });
